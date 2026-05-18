@@ -63,11 +63,11 @@ public class Structure : MonoBehaviour
             }
         }
 
-        // Place the building
+        //Place the building
         GameObject building = SpawnBuilding(buildingType.GetRandomHouse(), plot.Key, rotation);
         structureDictionary[plot.Key] = building;
 
-        // Occupy all required positions
+        //Occupy all required positions
         foreach (var pos in requiredPositions)
         {
             occupiedPositions.Add(pos);

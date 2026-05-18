@@ -4,7 +4,7 @@ using UnityEngine;
 public class LSystemGenerator : MonoBehaviour
 {
     public Rule[] rules;
-    public string axiom = "F"; // Fixed typo: aksiom -> axiom
+    public string axiom = "F"; 
 
     [Range(0, 15)]
     public int iterationLimit = 1;
@@ -15,8 +15,7 @@ public class LSystemGenerator : MonoBehaviour
     [SerializeField]
     [Range(0, 1)]
     private float branchPruningProbability = 0.5f;
-
-    // Cache rules by character for O(1) lookup
+    
     private System.Collections.Generic.Dictionary<char, Rule> ruleCache;
 
     private void Awake()
